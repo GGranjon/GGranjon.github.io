@@ -1,9 +1,18 @@
 /* Import Noto Sans font */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
+.roboto-font {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
 
 body {
-    font-family: 'Noto Sans';
+    font-family: "Roboto";
     background-color: #000000;
     color: #e0dede;
     font-weight: 700;
@@ -17,80 +26,109 @@ body {
     gap:30px
 }
 
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:transparent;
+}
+
 #button_panel{
     display:flex;
     flex-direction: row;
-    gap:15px;
-    background-color:#433f3f;
+    gap:25px;
+    background-color:#292828;
     padding: 5px;
     border-radius: 10px;
     margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    height:29px;
+    width:360px
+}
+
+#header{
+    margin-bottom: 50px;
 }
 
 .buttons{
-    background-color: #433f3f;
+    background-color: #292828;
     border:none;
     color:#ffff;
     border-radius: 8px;
     width: 80px;
     height:25px;
     font-weight: bold;
+    transition: transform 0.3s ease;
+    font-size: 16px;
 }
 
 .buttons:hover{
     background-color: #575454;
-    border-radius: 10px;
+    border-radius: 8px;
+    transform: scale(1.1);
 }
 #button_panel{
     display:flex;
 }
 
-#content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 #blocks_container{
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(6,1fr);
-    gap:10px;
-    width:min(65vw, 65vh);
-    height:min(65vw,65vh);
+    gap:12px;
+    width:min(75vw, 75vh);
+    height:min(75vw,75vh);
+    overflow: hidden;
+    margin:10px;
+    padding: 10px;
 }
 
 .main_blocks{
     display: flex;
-    background-color: #3d3b3b;
-    border-radius: 5px;
+    background-color: #29292e;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
+    font-size: 24px;
+}
+
+.main_blocks:hover{
+    transform: scale(1.014);
+    border-radius: 8px;
 
 }
 
-#block1{
+#presentation{
     grid-column: span 4;
 }
-#block2{
+#image{
     grid-row: span 3;
     grid-column: span 2;
-
-    background-color: rgb(18, 82, 109);
+    overflow: hidden;
+    background-color: rgb(15, 65, 87);
 }
-#block3{
+#title{
     grid-column: span 2;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(11, 56, 75);
+
 }
-#block4{
+#name{
+    text-align: center;
     grid-column: span 2;
     grid-row: span 2;
+    font-size: min(40px, 100%);
+    font-weight:bolder;
+    color:rgb(0, 116, 165);
 }
-#block5{
+#tech{
     grid-column: span 2;
     grid-row: span 3;
-    background-color: rgb(18, 82, 109);
-
 }
-#block6{
+#education{
     grid-column: span 4;
     grid-row: span 2;
 }
