@@ -86,7 +86,7 @@ a{
 
 .main_blocks{
     display: flex;
-    background-color: #29292e;
+    background-color: #292828;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
@@ -102,18 +102,26 @@ a{
 
 #presentation{
     grid-column: span 4;
+    opacity:0;
+    animation: slide-in 1s ease-out;
+    animation: slide-in-top 1s ease-out 0.45s forwards;
 }
 #image{
     grid-row: span 3;
     grid-column: span 2;
     overflow: hidden;
     background-color: rgb(15, 65, 87);
+    animation: slide-in 1s ease-out;
+    animation: slide-in-right 1s ease-out 0.3s forwards;
+    opacity:0;
 }
 #title{
     grid-column: span 2;
     padding: 5px;
     text-align: center;
     background-color: rgb(11, 56, 75);
+    animation: slide-in 1s ease-out;
+    animation: slide-in-left 1s ease-out forwards;
 
 }
 #name{
@@ -124,11 +132,63 @@ a{
     font-weight:bolder;
     color:rgb(0, 116, 165);
 }
+
 #tech{
     grid-column: span 2;
     grid-row: span 3;
+    animation: slide-in 1s ease-out;
+    animation: slide-in-left 1s ease-out 0.15s forwards;
+    opacity:0;
+
 }
 #education{
     grid-column: span 4;
     grid-row: span 2;
+    animation: slide-in 1s ease-out;
+    animation: slide-in-bottom 1s ease-out 0.4s forwards;
+    opacity:0;
 }
+
+@keyframes slide-in-left {
+    from {
+      transform: translateX(-200%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes slide-in-right {
+    from {
+      transform: translateX(200%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-top {
+    from {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-bottom {
+    from {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
