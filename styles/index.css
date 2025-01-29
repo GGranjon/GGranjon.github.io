@@ -73,18 +73,20 @@ a{
 }
 
 #blocks_container{
+    position:relative;
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(6,1fr);
     gap:12px;
-    width:min(75vw, 75vh);
-    height:min(75vw,75vh);
+    width:min(80vw, 80vh);
+    height:min(80vw, 80vh);
     overflow: hidden;
     margin:10px;
     padding: 10px;
 }
 
 .main_blocks{
+    position:absolute;
     display: flex;
     background-color: #292828;
     border-radius: 8px;
@@ -92,11 +94,28 @@ a{
     align-items: center;
     transition: transform 0.3s ease;
     font-size: 24px;
+    width:100%;
+    height:100%;
+    will-change: transform;
+}
+
+.wrapper{
+    position:relative;
+    display: flex;
+    background-color: #292828;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    font-size: 24px;
+    transform: none;
+    
 }
 
 .main_blocks:hover{
-    transform: scale(1.014);
+    transform: scale(1.015);
     border-radius: 8px;
+    
 
 }
 
@@ -104,49 +123,71 @@ a{
     grid-column: span 4;
     opacity:0;
     animation: slide-in 1s ease-out;
-    animation: slide-in-top 1s ease-out 0.45s forwards;
+    animation: slide-in-top 1s ease-out 0.63s forwards;
+    color:rgb(17, 84, 113);
 }
 #image{
     grid-row: span 3;
     grid-column: span 2;
     overflow: hidden;
     background-color: rgb(15, 65, 87);
-    animation: slide-in 1s ease-out;
-    animation: slide-in-right 1s ease-out 0.3s forwards;
+    animation: slide-in-right 1s ease-out 0.5s forwards;
     opacity:0;
 }
+
+#image2 img{
+    transform: scale(0.08);
+    transform-origin: center;
+}
+
 #title{
     grid-column: span 2;
+    opacity: 0;
     padding: 5px;
     text-align: center;
     background-color: rgb(11, 56, 75);
-    animation: slide-in 1s ease-out;
-    animation: slide-in-left 1s ease-out forwards;
-
+    animation: slide-in-left 1s ease-out 0.2s forwards;
 }
+
+#title2{
+ background-color: rgb(11, 56, 75);    
+}
+
 #name{
     text-align: center;
     grid-column: span 2;
     grid-row: span 2;
-    font-size: min(40px, 100%);
-    font-weight:bolder;
-    color:rgb(0, 116, 165);
+    min-width: 200px;
+    min-height: 200px;
+}
+
+#name2{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: -25px;
+    justify-content: center;
+}
+
+#name_holder{
+    font-weight: bolder;
+    font-size: 2.5rem;
 }
 
 #tech{
     grid-column: span 2;
     grid-row: span 3;
-    animation: slide-in 1s ease-out;
-    animation: slide-in-left 1s ease-out 0.15s forwards;
+    animation: slide-in-left 1s ease-out 0.35s forwards;
     opacity:0;
-
+    color:rgb(17, 84, 113);
 }
 #education{
     grid-column: span 4;
     grid-row: span 2;
-    animation: slide-in 1s ease-out;
-    animation: slide-in-bottom 1s ease-out 0.4s forwards;
+    animation: slide-in-bottom 1s ease-out 0.575s forwards;
     opacity:0;
+    color:rgb(17, 84, 113);
 }
 
 @keyframes slide-in-left {
@@ -179,6 +220,7 @@ a{
     to {
       transform: translateY(0);
       opacity: 1;
+      transform:none;
     }
   }
   
@@ -192,3 +234,17 @@ a{
       opacity: 1;
     }
   }
+
+  .typed-cursor {
+    position:relative;
+    animation: blink 1s infinite;
+    font-size: inherit;  /* Matches the text size */
+    vertical-align: baseline; /* Aligns properly */
+    font-size: 30px;
+    width:0px;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }} 

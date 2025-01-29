@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <div id="container">
         <div id="header">
             <div id="button_panel">
@@ -18,15 +19,28 @@
             </div>
         </div>
             <div id="blocks_container">
-                <div id="presentation" class="main_blocks">Who am I ?</div>
-                <div id="image" class="main_blocks"> <img src="img/forest.jpg" alt="Description of the image"></div>
-                <div id="title" class="main_blocks"> Student in AI and Data Science</div>
-                <div id="name" class="main_blocks"> <p>GABIN GRANJON</p></div>
-                <div id="tech" class="main_blocks"> Technos</div>
-                <div id="education" class="main_blocks"> Education</div>
+                <div id="presentation" class="wrapper"><div  class="main_blocks">Who am I ?</div></div>
+                <div id="image" class="wrapper"><div id="image2" class="main_blocks"><img src="img/bg_forest.jpg" alt="Ambiance_image"></div></div>
+                <div id="title" class="wrapper"><div id="title2" class="main_blocks"> <p>AI and Data Science student</p></div></div>
+                <div id="name" class="wrapper"><div id="name2" class="main_blocks"> <span id = name_holder class="auto-type"></span> </div></div>
+                <div id="tech" class="wrapper"><div  class="main_blocks"> Technos</div></div>
+                <div id="education" class="wrapper"><div  class="main_blocks"> Education</div></div>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Hello !","I'm GABIN GRANJON"],
+            typeSpeed: 60,
+            backDelay: 1300,
+            backSpeed: 80,
+            loop: false,
+            showCursor: true,
+            onComplete: (self) => {
+            document.querySelector(".typed-cursor").style.animation = "blink 1.5s infinite"; // Slower blinking
+        }
+        })
+    </script>
 </body>
 
 </html>
