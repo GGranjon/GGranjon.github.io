@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
     <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="img/logo_site.png">
 </head>
 
 <body>
@@ -18,27 +19,110 @@
                 <a href="pages/contact.html"><button id="button3" class="buttons"> Contact</button></a>
             </div>
         </div>
-            <div id="blocks_container">
-                <div id="presentation" class="wrapper"><div  class="main_blocks">Who am I ?</div></div>
-                <div id="image" class="wrapper"><div id="image2" class="main_blocks"><img src="img/bg_forest.jpg" alt="Ambiance_image"></div></div>
-                <div id="title" class="wrapper"><div id="title2" class="main_blocks"> <p>AI and Data Science student</p></div></div>
-                <div id="name" class="wrapper"><div id="name2" class="main_blocks"> <span id = name_holder class="auto-type"></span> </div></div>
-                <div id="tech" class="wrapper"><div  class="main_blocks"> Technos</div></div>
-                <div id="education" class="wrapper"><div  class="main_blocks"> Education</div></div>
+        <div id="blocks_container">
+            <div id="presentation" class="wrapper">
+                <div id="pres_wrap" class="main_blocks">
+                    <div class="techno_title">
+                        <span class="big_titles">Who am I?</span>
+                    </div>
+                    <div id="text_centering">
+                        <span id="pres_content">I am a french computer science student, currently specialising in Data
+                            Science and Artificial Intelligence. Actively seeking a final-year internship.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="image" class="wrapper">
+                <div id="image2" class="main_blocks"><img src="img/bg_forest.jpg" alt="Ambiance_image"></div>
+            </div>
+            <div id="title" class="wrapper">
+                <div id="title2" class="main_blocks">
+                    <p>AI and Data Science student</p>
+                </div>
+            </div>
+            <div id="name" class="wrapper">
+                <div id="name2" class="main_blocks"> <span id=name_holder class="auto-type"></span> </div>
+            </div>
+
+            <div id="education" class="wrapper">
+                <div id="education_block" class="main_blocks">
+                    <span class="big_titles">Education</span>
+                    <div id="education_content">
+                        <span id="educ_text">
+                            contenu
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="tech" class="wrapper">
+                <div id="techno_div" class="main_blocks">
+                    <div class="techno_title">
+                        <span class="big_titles">Languages</span>
+                    </div>
+                    <div class="scroller-size">
+                        <div class="scrolling-panel">
+                            <div id="logos-test1" class="logos-test">
+                                <img src="img/python_logo.png" alt="Logo 1">
+                                <img src="img/c_logo.png" alt="Logo 2">
+                                <img src="img/cpp_logo.png" alt="Logo 3">
+                                <img src="img/java_logo.png" alt="Logo 4" id="java_logo">
+                                <img src="img/R_logo.png" alt="Logo 4">
+                                <img src="img/python_logo.png" alt="Logo 1">
+                                <img src="img/c_logo.png" alt="Logo 2">
+                                <img src="img/cpp_logo.png" alt="Logo 3">
+                                <img src="img/java_logo.png" alt="Logo 4" id="java_logo">
+                                <img src="img/R_logo.png" alt="Logo 4">
+                                <img src="img/python_logo.png" alt="Logo 1">
+                                <img src="img/c_logo.png" alt="Logo 2">
+                                <img src="img/cpp_logo.png" alt="Logo 3">
+                                <img src="img/java_logo.png" alt="Logo 4" id="java_logo">
+                                <img src="img/R_logo.png" alt="Logo 4">
+                                <img src="img/python_logo.png" alt="Logo 1">
+                                <img src="img/c_logo.png" alt="Logo 2">
+                                <img src="img/cpp_logo.png" alt="Logo 3">
+                                <img src="img/java_logo.png" alt="Logo 4" id="java_logo">
+                                <img src="img/R_logo.png" alt="Logo 4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="techno_title">
+                        <span class="big_titles">Frameworks</span>
+                    </div>
+                    <div class="scroller-size">
+                        <div class="scrolling-panel">
+                            <div id="logos-test2" class="logos-test">
+                                <img src="img/pandas_white.png" alt="Logo 1">
+                                <img src="img/pytorch.png" alt="Logo 2">
+                                <img src="img/scikit_logo.png" alt="Logo 3">
+                                <img src="img/seaborn_logo.png" alt="Logo 4">
+                                <img src="img/pandas_white.png" alt="Logo 1">
+                                <img src="img/pytorch.png" alt="Logo 2">
+                                <img src="img/scikit_logo.png" alt="Logo 3">
+                                <img src="img/seaborn_logo.png" alt="Logo 4">
+                                <img src="img/pandas_white.png" alt="Logo 1">
+                                <img src="img/pytorch.png" alt="Logo 2">
+                                <img src="img/scikit_logo.png" alt="Logo 3">
+                                <img src="img/seaborn_logo.png" alt="Logo 4">
+                                <img src="img/pandas_white.png" alt="Logo 1">
+                                <img src="img/pytorch.png" alt="Logo 2">
+                                <img src="img/scikit_logo.png" alt="Logo 3">
+                                <img src="img/seaborn_logo.png" alt="Logo 4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typed = new Typed(".auto-type", {
-            strings: ["Hello !","I'm GABIN GRANJON"],
+            strings: ["Hello !", "I'm GABIN GRANJON"],
             typeSpeed: 60,
             backDelay: 1300,
             backSpeed: 80,
             loop: false,
-            showCursor: true,
-            onComplete: (self) => {
-            document.querySelector(".typed-cursor").style.animation = "blink 1.5s infinite"; // Slower blinking
-        }
+            showCursor: false,
         })
     </script>
 </body>
